@@ -24,7 +24,7 @@ const Login = () => {
     const [editId, setEditId] = useState(0);
    
     const onSubmit = (values, { setSubmitting, resetForm }) => {
-        axios.post('http://localhost:4000/api/registration', values)
+        axios.post('http://localhost:4000/api/registros', values)
             .then(response => {
                 console.log(response.data);
                 setUsers([...users, values]); 
@@ -61,7 +61,7 @@ const Login = () => {
         const updatedUsers = users.filter(user => user.id !== id); 
         setUsers(updatedUsers); 
 
-            axios.delete(`http://localhost:4000/api/registration/${id}`)
+            axios.delete(`http://localhost:4000/api/registros/${id}`)
                 .then(response => {
                     console.log("Usuario eliminado:", response.data);
                 })
