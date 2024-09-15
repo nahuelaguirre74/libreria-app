@@ -1,0 +1,1 @@
+//Acá vamos a diseñar un card para el estado del prestamo
